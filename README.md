@@ -338,18 +338,31 @@ python tests/test_api.py
 
 Expected output:
 ```
-============================================================
-BlackRock Retirement Savings API - Integration Tests
-============================================================
-✅ Test 1: Parse Transactions passed!
-✅ Test 2: Validate Transactions passed!
-✅ Test 3: Filter Transactions passed!
-✅ Test 4: NPS Returns passed!
-✅ Test 5: Index Fund Returns passed!
-✅ Test 6: Performance Metrics passed!
-============================================================
-✅ ALL TESTS PASSED!
-============================================================
+test_api.py::TestTransactionsParse::test_parse_basic_expenses PASSED     [  4%]
+test_api.py::TestTransactionsParse::test_parse_exact_multiple_of_100 PASSED [  8%]
+test_api.py::TestTransactionsParse::test_parse_small_amount PASSED       [ 13%]
+test_api.py::TestTransactionsParse::test_parse_empty_expenses PASSED     [ 17%]
+test_api.py::TestTransactionsValidator::test_validator_all_valid PASSED  [ 21%]
+test_api.py::TestTransactionsValidator::test_validator_duplicate_date PASSED [ 26%]
+test_api.py::TestTransactionsValidator::test_validator_negative_amount PASSED [ 30%]
+test_api.py::TestTransactionsValidator::test_validator_exceeds_wage PASSED [ 34%]
+test_api.py::TestTransactionsFilter::test_filter_with_q_period PASSED    [ 39%]
+test_api.py::TestTransactionsFilter::test_filter_with_p_period PASSED    [ 43%]
+test_api.py::TestTransactionsFilter::test_filter_with_q_and_p_periods PASSED [ 47%]
+test_api.py::TestTransactionsFilter::test_filter_outside_k_period PASSED [ 52%]
+test_api.py::TestTransactionsFilter::test_filter_negative_amount_excluded PASSED [ 56%]
+test_api.py::TestReturnsNPS::test_nps_basic_calculation PASSED           [ 60%]
+test_api.py::TestReturnsNPS::test_nps_with_tax_benefit PASSED            [ 65%]
+test_api.py::TestReturnsNPS::test_nps_age_over_60 PASSED                 [ 69%]
+test_api.py::TestReturnsIndex::test_index_basic_calculation PASSED       [ 73%]
+test_api.py::TestReturnsIndex::test_index_vs_nps_comparison PASSED       [ 78%]
+test_api.py::TestPerformanceEndpoint::test_performance_endpoint PASSED   [ 82%]
+test_api.py::TestEdgeCases::test_parse_missing_expenses PASSED           [ 86%]
+test_api.py::TestEdgeCases::test_validator_missing_wage PASSED           [ 91%]
+test_api.py::TestEdgeCases::test_returns_decimal_inflation PASSED        [ 95%]
+test_api.py::TestEdgeCases::test_filter_multiple_k_periods_overlap PASSED [100%]
+
+============================= 23 passed in 0.25s ==============================
 ```
 
 ## 🧮 Algorithm Details
