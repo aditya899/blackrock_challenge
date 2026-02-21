@@ -508,13 +508,5 @@ curl http://localhost:5477/blackrock/challenge/v1/performance
 telnet localhost 5477
 ```
 
-## 📄 License
-MIT License - Feel free to use this solution for learning and development.
-
 ## 👤 Author
-Your Name - Backend Engineer specializing in financial systems
-
-## 🙏 Acknowledgments
-- BlackRock for the challenging problem statement
-- Flask community for excellent documentation
-- Alpine Linux team for the lightweight container base
+Aditya Raj - Backend Engineer specializing in financial systems

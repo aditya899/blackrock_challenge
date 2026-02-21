@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: blk-hacking-ind-aditya-raj
+    ports:
+      - "5477:5477"
+    environment:
+      - FLASK_ENV=local
+    restart: unless-stopped
