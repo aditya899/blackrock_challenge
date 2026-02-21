@@ -99,7 +99,7 @@ class RetirementSavingsAPI:
                 invalid.append(invalid_trans)
                 continue
 
-            if trans['amount'] >= 500000:
+            if trans['amount'] >= wage:
                 invalid_trans = trans.copy()
                 invalid_trans['message'] = 'Amount exceeds maximum limit'
                 invalid.append(invalid_trans)
